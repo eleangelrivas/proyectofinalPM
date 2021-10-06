@@ -54,7 +54,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> ele
 
             <div class="m-t-40 text-center">
                 <p class="text-white">Don't have an account ? <a href="pages-register.php" class="font-500 font-14 text-white font-secondary"> Signup Now </a> </p>
