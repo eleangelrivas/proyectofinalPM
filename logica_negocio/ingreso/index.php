@@ -21,7 +21,7 @@
                         <h4 class="font-18 m-b-5 text-center">Bienvenido</h4>
                         <p class="text-muted text-center">Ingrese sus credenciales</p>
 
-                        <form class="form-horizontal m-t-30" action="index.php">
+                        <form class="form-horizontal m-t-30" action="index.php" id="formulario_login">
 
                             <div class="form-group">
                                 <label for="correo">Correo</label>
@@ -61,6 +61,7 @@
 
         <!-- App js -->
         <script src="../../public/assets/js/app.js"></script>
+        <script src="funciones_ingreso.js" type="text/javascript" charset="utf-8" ></script>
 
     </body>
 </html>
