@@ -25,12 +25,12 @@
 
                             <div class="form-group">
                                 <label for="correo">Correo</label>
-                                <input type="text" name="correo" class="form-control" id="correo" placeholder="Ingrese su correo">
+                                <input autocomplete="off" type="text" name="correo" class="form-control" id="correo" placeholder="Ingrese su correo">
                             </div>
 
                             <div class="form-group">
                                 <label for="userpassword">Contraseña</label>
-                                <input type="contrasena" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña">
+                                <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña">
                             </div>
 
                             <div class="form-group row m-t-20">
