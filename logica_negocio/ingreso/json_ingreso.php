@@ -1,10 +1,9 @@
 <?php 
 	
-	include_once("../../Conexion/Conexion.php");
-	$instancia = new Conexion();
-	$conexion = $instancia->get_conexion();
+	include_once("../../Conexion/Modelo_generico.php");
+	
 
 	 
 
-
+	
 ?>
