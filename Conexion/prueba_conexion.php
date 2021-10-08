@@ -5,7 +5,6 @@
 	$instancia = new Conexion();
 	$conexion = $instancia->get_conexion();
 	try {
-	
 		$sql ="SELECT *FROM tb_persona";
 		$statement = $conexion->prepare($sql);
 		$statement->execute();
