@@ -1,3 +1,5 @@
+ 
+
 <?php include '../../layouts/header.php'; ?>
 <!-- C3 charts css -->
 <link href="../../public/plugins/c3/c3.min.css" rel="stylesheet" type="text/css" />

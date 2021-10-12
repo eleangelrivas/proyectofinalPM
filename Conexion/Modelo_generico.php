@@ -1,8 +1,6 @@
 <?php 
 	@session_start();
-	require_once 'Conexion.php';
-	require_once 'configuraciones.php';
-
+	require_once 'Conexion.php'; 
 	/**
 	* 
 	*/
