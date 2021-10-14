@@ -1,7 +1,13 @@
 $(function(){
 	var fecha = new Date();
 	console.log("Jquery esta funcionando");
+
+	$.mask.definitions['~']='[2,6,7]';
+	$('#telefono').mask("~999-9999");
+
+	
 	$("#formulario_registro").parsley();
+
 	$('#fecha').datepicker({
 	    format: "dd/mm/yyyy",
 	    language: "es",
