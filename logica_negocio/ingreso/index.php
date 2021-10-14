@@ -44,7 +44,7 @@
 
                             <div class="form-group m-t-10 mb-0 row">
                                 <div class="col-12 m-t-20">
-                                    <a href="pages-recoverpw.php" class="text-muted"><i class="mdi mdi-lock"></i> Recuperar contraseña</a>
+                                    <a href="recuperar_passsword.php" class="text-muted"><i class="mdi mdi-lock"></i> Recuperar contraseña</a>
                                 </div>
                             </div>
                         </form>

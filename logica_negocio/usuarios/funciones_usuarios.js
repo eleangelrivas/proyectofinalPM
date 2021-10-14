@@ -11,6 +11,23 @@ $(function(){
 	});
 	cargar_datos();
 
+	$(document).on("click",".btn_recupearcontra",function(e){
+		mostrar_cargando("Espere","Enviando contraseña");
+		e.preventDefault();
+		var datos = {"enviar_contra":"si_enviala","email":$(this).attr('data-email'),"id":$(this).attr('data-id')}
+		console.log("datos: ",datos);
+		$.ajax({
+	        dataType: "json",
+	        method: "POST",
+	        url:'json_usuarios.php',
+	        data : datos,
+	    }).done(function(json) {
+	    	console.log("El envio: ",json);
+	    }).always(function(){
+	    	Swal.close();
+	    });
+
+	});
 	$(document).on("click",".btn_editar",function(e){
 		e.preventDefault(); 
 

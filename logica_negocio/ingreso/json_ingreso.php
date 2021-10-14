@@ -2,7 +2,36 @@
 	@session_start();
 	require_once("../../Conexion/Modelo_generico.php");
 	$modelo = new Modelo_generico();
-	if (isset($_POST['desbloquear']) && $_POST['desbloquear']=="si_con_contrasena") {
+	if (isset($_POST['validar_dui']) && $_POST['validar_dui']=="actualizar_pass") {
+		
+		$array = array(
+			"table"=>"tb_usuario",
+			"id_persona"=>$_POST['el_id'],
+			"contrasena"=>$modelo->encriptarlas_contrasenas($_POST['la_contra'])
+		);
+		$resultado = $modelo->actualizar_generica($array);
+		if($resultado[0]=='1' && $resultado[4]>0){
+            print json_encode(array("Exito",));
+            exit();
+        }else {
+            print json_encode(array("Error",$_POST,$resultado));
+            exit();
+        }
+
+
+	}else if (isset($_POST['validar_dui']) && $_POST['validar_dui']=="si_validar") {
+
+		$resultado = $modelo->get_todos("tb_persona","WHERE dui = '".$_POST['el_dui']."'");
+        if($resultado[0]=='1' && $resultado[4]>0){
+            print json_encode(array("Exito",$resultado[2][0]['id'],$_POST,$resultado[2][0]));
+            exit();
+
+        }else {
+            print json_encode(array("Error",$_POST,$resultado));
+            exit();
+        }
+
+	}else if (isset($_POST['desbloquear']) && $_POST['desbloquear']=="si_con_contrasena") {
 		$sql = "SELECT 
 					*FROM tb_persona AS tp
 				JOIN tb_usuario as tu 
